@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="cordova-plugin-simple-browser"
+      version="1.0.2-dev">
+
+    <name>SimpleBrowser</name>
+    <description>Cordova Simple Browser Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,in,app,browser,inappbrowser</keywords>
+
+    <engines>
+      <engine name="cordova" version=">=3.1.0" /><!-- Needs cordova/urlutil -->
+    </engines>
+
+    <js-module src="www/simplebrowser.js" name="simplebrowser">
+      <clobbers target="com.speedshare.cordova.simplebrowser" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+      <header-file src="src/ios/CDVSimpleBrowser.h" />
+      <source-file src="src/ios/CDVSimpleBrowser.m" />
+
+      <framework src="WebKit.framework" />
+
+      <!-- Adopts project's config.xml to include the SpeedshareCordovaPlugin and domain whitelists -->
+
+      <config-file target="config.xml" parent="/*">
+          <feature name="SimpleBrowser">
+              <param name="ios-package" value="CDVSimpleBrowser"/>
+          </feature>
+      </config-file>
+      <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+        <dict>
+          <key>NSAllowsArbitraryLoads</key>
+          <true/>
+        </dict>
+      </config-file>
+    </platform>
+
+</plugin>
