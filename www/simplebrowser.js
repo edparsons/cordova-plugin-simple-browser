@@ -8,23 +8,15 @@ window.simpleBrowser = {
     Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'stop', []);
   },
   hideView: function() {
-    if (SSHtmlViewer.browserStart) {
-      Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'hideView', []);
-    }
+    Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'hideView', []);
   },
   showView: function() {
-    if (SSHtmlViewer.browserStart) {
-      Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'showView', []);
-    }
+    Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'showView', []);
   },
   forward: function() {
-    if (SSHtmlViewer.browserStart) {
-      Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'forward', []);
-    }
+    Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'forward', []);
   },
   back: function() {
-    if (SSHtmlViewer.browserStart) {
-      Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'back', []);
-    }
+    Cordova.exec(SSHtmlViewer.SSHTMLSuccess, SSHtmlViewer.SSHTMLError, 'SimpleBrowser', 'back', []);
   }
 };
