@@ -17,6 +17,21 @@
       <clobbers target="com.speedshare.cordova.simplebrowser" />
     </js-module>
 
+    <!-- android -->
+    <platform name="android">
+      
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="SimpleBrowser">
+          <param name="android-package" value="com.speedshare.cordova.simplebrowser.CDVSimpleBrowser"/>
+        </feature>
+      </config-file>
+
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.INTERNET" />
+      </config-file>
+      <source-file src="src/android/com/speedshare/cordova/simplebrowser/CDVSimpleBrowser.java" target-dir="src/com/speedshare/cordova/simplebrowser/" />
+    </platform>
+
     <!-- ios -->
     <platform name="ios">
       <header-file src="src/ios/CDVSimpleBrowser.h" />
@@ -38,5 +53,4 @@
         </dict>
       </config-file>
     </platform>
-
 </plugin>
